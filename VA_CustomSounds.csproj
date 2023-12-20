@@ -92,6 +92,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
+	  <LangVersion>12</LangVersion>
     <PostBuildEvent>cd "$(TargetDir)"
 
 for %25%25I in (*) do (
