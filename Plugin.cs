@@ -17,7 +17,7 @@ namespace VA_CustomSounds
     {
         private const string PLUGIN_GUID = "CustomSounds";
         private const string PLUGIN_NAME = "Custom Sounds";
-        private const string PLUGIN_VERSION = "1.0.0";
+        private const string PLUGIN_VERSION = "1.0.1";
 
         public static Plugin Instance;
         internal ManualLogSource logger;
@@ -189,7 +189,8 @@ namespace VA_CustomSounds
 
         private void ProcessSoundFiles(string directoryPath, string packName)
         {
-            foreach (string file in Directory.GetFiles(directoryPath, "*.wav"))
+            string[] files = [.. Directory.GetFiles(directoryPath, "*.wav"), .. Directory.GetFiles(directoryPath, "*.mp3"), .. Directory.GetFiles(directoryPath, "*.ogg")];
+            foreach (string file in files)
             {
                 string soundName = Path.GetFileNameWithoutExtension(file);
                 string newHash = CalculateMD5(file);
