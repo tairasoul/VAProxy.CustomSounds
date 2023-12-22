@@ -1,6 +1,6 @@
 # VAProxy.CustomSounds
 
-A migration of [CustomSounds](https://github.com/clementinise/CustomSounds) to work on VA Proxy.
+A modification of [CustomSounds](https://github.com/clementinise/CustomSounds) to work on VA Proxy.
 
 Needs VAProxy.PageFramework.
 
